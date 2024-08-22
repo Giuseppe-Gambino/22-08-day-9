@@ -142,7 +142,7 @@ function upperFirst(testo) {
   return testo;
 }
 
-console.log(upperFirst("ciao"));
+console.log(upperFirst("ciao, come stai?"));
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere

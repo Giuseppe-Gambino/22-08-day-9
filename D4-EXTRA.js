@@ -6,6 +6,23 @@
  La funzione deve inoltre ritornare la somma di tutti i valori maggiori di 5.
 */
 
+function checkArray(n1) {
+  let list = giveMeRandom(n1);
+  let somma = 0;
+  console.log(list);
+  for (let i = 0; i < n1; i++) {
+    if (list[i] > 5) {
+      console.log(list[i], "il valore è maggiore di 5");
+      somma += list[i];
+    } else {
+      console.log(list[i], "il valore è minore di 5");
+    }
+  }
+  return "la somma è: " + somma;
+}
+
+console.log(checkArray(5));
+
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 /* EXTRA 2
@@ -14,6 +31,40 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+
+// ipotetico carrello
+let shoppingCart = [
+  { price: 0, name: "cipolle", id: 123, quantity: 0 },
+  { price: 0, name: "monitor", id: 235, quantity: 0 },
+  { price: 0, name: "mouse", id: 546, quantity: 0 },
+  { price: 0, name: "Wooting60he", id: 234, quantity: 0 },
+];
+
+// prezzi e quantita random
+function cose(maxP, maxQ) {
+  for (let i = 0; i < shoppingCart.length; i++) {
+    let acaso = Math.floor(Math.random() * maxP);
+    shoppingCart[i].price = acaso;
+  }
+  for (let i = 0; i < shoppingCart.length; i++) {
+    let acaso = Math.floor(Math.random() * maxQ);
+    shoppingCart[i].quantity = acaso;
+  }
+  return shoppingCart;
+}
+
+console.log(cose(300, 7));
+
+// calcolatore di tot spesa
+function shoppingCartTotal() {
+  let somma = 0;
+  for (let i = 0; i < shoppingCart.length; i++) {
+    somma += shoppingCart[i].price * shoppingCart[i].quantity;
+  }
+  return somma + " $";
+}
+
+console.log(shoppingCartTotal());
 
 /* EXTRA 3
  Nel tuo eCommerce disponi di un'array di oggetti chiamato "shoppingCart". Ognuno di questi oggetti ha le seguenti proprietà: "price", "name", "id" e "quantity".
