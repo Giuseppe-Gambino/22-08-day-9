@@ -72,10 +72,10 @@ console.log(boundary(300));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 function epify(testo) {
-  if (testo === "EPICODE") {
+  if (testo.startsWith("EPICODE")) {
     return testo;
   }
-  return testo + " EPICODE";
+  return "EPICODE " + testo;
 }
 
 console.log(epify("EPICODE"));
